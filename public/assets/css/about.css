@@ -1,0 +1,33 @@
+.about-title {
+    font-size: 1.5rem !important;
+}
+.seven-separator:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(0,0,0,.15);
+}
+.seven-separator:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 100px;
+    /* background-color: pink; */
+    border-radius: 1000px;
+    /* background-color: #efefef; */
+    background-color: #fff;
+}
+.seven-separator img {
+    width: 70px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}

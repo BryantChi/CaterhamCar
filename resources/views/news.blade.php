@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<link rel="stylesheet" href="{{ asset('assets/css/news.css') }}"/>
+
 @section('section_content')
     @include('layouts.sub_hero')
 
@@ -33,7 +35,7 @@
                         <img src="{{ asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}" class="img-fluid news-item-img" alt="">
                         <div class="card-body content p-4 newinfo-content">
                             <div class="d-flex">
-                                <ul class="date text-center text-primary2 mr-3 mb-0 list-unstyled">
+                                <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">
                                     <li class="day shadow2 h6 font-weight-bold mb-2">30</li>
                                     <li class="month h6 font-weight-bold">Nov</li>
                                 </ul>
@@ -58,7 +60,7 @@
                         <img src="{{ $item->news_front_cover != '' ? 'uploads/' . $item->news_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}" class="img-fluid news-item-img" alt="">
                         <div class="card-body content p-4 newinfo-content">
                             <div class="d-flex">
-                                <ul class="date text-center text-primary2 mr-3 mb-0 list-unstyled">
+                                <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">
                                     <li class="day shadow2 h6 font-weight-bold mb-2">{{ date("d",strtotime($item->created_at)) }}</li>
                                     <li class="month h6 font-weight-bold">{{ date("M",strtotime($item->created_at)) }}</li>
                                 </ul>
@@ -70,7 +72,7 @@
                                     <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
                                     <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
                                 </ul> --}}
-                                <a href="news/{{ $item->id }}" class="text-muted readmore">Read More <i class="mdi mdi-chevron-right"></i></a>
+                                <a href="news/{{ $item->id }}" class="text-muted readmore">More <i class="fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

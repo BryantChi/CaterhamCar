@@ -14,7 +14,7 @@ class PageSettingInfo extends EloquentRepository
      */
     protected $eloquentClass = Model::class;
 
-    public static function getHomeBanner($uri) {
+    public static function getHomeBanner() {
         $pageInfo = Model::where('page_url', '=', '/index')->get();
         return $pageInfo;
     }

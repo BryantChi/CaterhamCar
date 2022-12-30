@@ -18,8 +18,8 @@ class NewsController extends Controller
     {
         //
         $newInfo = NewsInfo::orderBy('updated_at', 'desc')->limit(15)->get();
-        return view('news', ['newInfo' => $newInfo, 'title' => $this->title]);
-        // , 'pageInfo' => $this->getBanner()
+        return view('news', ['newInfo' => $newInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
+        //
     }
 
     /**
@@ -53,8 +53,7 @@ class NewsController extends Controller
     {
         //
         $newsInfo = NewsInfo::find($id);
-        return view('news-details', ['newsInfo' => $newsInfo, 'title' => $this->title]);
-        // , 'pageInfo' => $this->getBanner()
+        return view('news-details', ['newsInfo' => $newsInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
     }
 
     /**
@@ -91,7 +90,7 @@ class NewsController extends Controller
         //
     }
 
-    function getBanner() {
+    private function getBanner() {
         return PageSettingRepository::getBanners('/news');
     }
 }

@@ -33,6 +33,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection line
      * @property Grid\Column|Collection facebook
      * @property Grid\Column|Collection instagram
+     * @property Grid\Column|Collection email
      * @property Grid\Column|Collection page_url
      * @property Grid\Column|Collection page_title
      * @property Grid\Column|Collection page_banner_img
@@ -49,12 +50,17 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection parent_id
      * @property Grid\Column|Collection menu_id
-     * @property Grid\Column|Collection email
      * @property Grid\Column|Collection value
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection uri
      * @property Grid\Column|Collection extension
      * @property Grid\Column|Collection email_verified_at
+     * @property Grid\Column|Collection models_front_cover
+     * @property Grid\Column|Collection models_img
+     * @property Grid\Column|Collection features
+     * @property Grid\Column|Collection specification
+     * @property Grid\Column|Collection s_pack
+     * @property Grid\Column|Collection r_pack
      * @property Grid\Column|Collection content
      * @property Grid\Column|Collection news_front_cover
      * @property Grid\Column|Collection category
@@ -87,6 +93,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection line(string $label = null)
      * @method Grid\Column|Collection facebook(string $label = null)
      * @method Grid\Column|Collection instagram(string $label = null)
+     * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection page_url(string $label = null)
      * @method Grid\Column|Collection page_title(string $label = null)
      * @method Grid\Column|Collection page_banner_img(string $label = null)
@@ -103,12 +110,17 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection parent_id(string $label = null)
      * @method Grid\Column|Collection menu_id(string $label = null)
-     * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection value(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
      * @method Grid\Column|Collection extension(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
+     * @method Grid\Column|Collection models_front_cover(string $label = null)
+     * @method Grid\Column|Collection models_img(string $label = null)
+     * @method Grid\Column|Collection features(string $label = null)
+     * @method Grid\Column|Collection specification(string $label = null)
+     * @method Grid\Column|Collection s_pack(string $label = null)
+     * @method Grid\Column|Collection r_pack(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection news_front_cover(string $label = null)
      * @method Grid\Column|Collection category(string $label = null)
@@ -146,6 +158,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection line
      * @property Show\Field|Collection facebook
      * @property Show\Field|Collection instagram
+     * @property Show\Field|Collection email
      * @property Show\Field|Collection page_url
      * @property Show\Field|Collection page_title
      * @property Show\Field|Collection page_banner_img
@@ -162,12 +175,17 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection order
      * @property Show\Field|Collection parent_id
      * @property Show\Field|Collection menu_id
-     * @property Show\Field|Collection email
      * @property Show\Field|Collection value
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection uri
      * @property Show\Field|Collection extension
      * @property Show\Field|Collection email_verified_at
+     * @property Show\Field|Collection models_front_cover
+     * @property Show\Field|Collection models_img
+     * @property Show\Field|Collection features
+     * @property Show\Field|Collection specification
+     * @property Show\Field|Collection s_pack
+     * @property Show\Field|Collection r_pack
      * @property Show\Field|Collection content
      * @property Show\Field|Collection news_front_cover
      * @property Show\Field|Collection category
@@ -200,6 +218,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection line(string $label = null)
      * @method Show\Field|Collection facebook(string $label = null)
      * @method Show\Field|Collection instagram(string $label = null)
+     * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection page_url(string $label = null)
      * @method Show\Field|Collection page_title(string $label = null)
      * @method Show\Field|Collection page_banner_img(string $label = null)
@@ -216,12 +235,17 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection parent_id(string $label = null)
      * @method Show\Field|Collection menu_id(string $label = null)
-     * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection value(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)
      * @method Show\Field|Collection extension(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
+     * @method Show\Field|Collection models_front_cover(string $label = null)
+     * @method Show\Field|Collection models_img(string $label = null)
+     * @method Show\Field|Collection features(string $label = null)
+     * @method Show\Field|Collection specification(string $label = null)
+     * @method Show\Field|Collection s_pack(string $label = null)
+     * @method Show\Field|Collection r_pack(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection news_front_cover(string $label = null)
      * @method Show\Field|Collection category(string $label = null)

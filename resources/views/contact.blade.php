@@ -57,7 +57,8 @@
                         <div class="col-md-8 mx-auto contact-form-contact-info">
                             <p class="d-flex">
                                 <span class="ion-ios-location icon mr-5"></span>
-                                <span><a href="https://goo.gl/maps/biKuasq6JusbMqXo7">台中市南屯區環中路四段161號</a><a href="https://goo.gl/maps/biKuasq6JusbMqXo7" target="_blank"
+                                <span>台中市南屯區環中路四段161號<br>
+                                    <a href="https://goo.gl/maps/biKuasq6JusbMqXo7" target="_blank"
                                     class="text-primary">View on Google map</a></span>
                             </p>
 
@@ -76,7 +77,7 @@
 
                             <p class="d-flex">
                                 <span class="ion-ios-telephone icon mr-5"></span>
-                                <span><a href="tel:04-2380-4386">04-2380-4386</a></span>
+                                <span>聯絡電話<br><a href="tel:04-2380-4386">04-2380-4386</a></span>
                             </p>
 
                             <p class="d-flex">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\PageSettingInfo as PageSetting;
+use App\Admin\Repositories\PageSettingInfo as PageSettingRepository;
 
 class IndexController extends Controller
 {
@@ -15,9 +15,8 @@ class IndexController extends Controller
     public function index()
     {
         //
-        // $pageInfo = PageSetting::where('page_url', '=', '/index')->get();
-        // return view('index', ['pageInfo' => $pageInfo]);
-        return view('index');
+        return view('index', ['pageInfo' => $this->getBanner()]);
+        // return view('index');
     }
 
     /**
@@ -84,5 +83,9 @@ class IndexController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function getBanner() {
+        return PageSettingRepository::getHomeBanner();
     }
 }

@@ -1,7 +1,7 @@
-<?php 
+<?php
 return [
     'labels' => [
-        'PageSettingInfo' => 'PageSettingInfo',
+        'PageSettingInfo' => '頁面設定',
         'page-setting-info' => 'PageSettingInfo',
     ],
     'fields' => [

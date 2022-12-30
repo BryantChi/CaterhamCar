@@ -18,5 +18,6 @@ Route::group([
     $router->resource('/news', 'NewsInfoController');
     $router->resource('/page_settings', 'PageSettingInfoController');
     $router->resource('/base_setting', 'BaseSettingInfoController');
+    $router->resource('/models', 'CarModelsInfoController');
 
 });

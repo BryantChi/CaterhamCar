@@ -17,8 +17,8 @@ class AboutUsController extends Controller
     {
         //
         $aboutUsInfo = AboutUsInfo::first();
-        return view('about', ['title' => '關於我們', 'aboutUsInfo' => $aboutUsInfo]);
-        // , 'pageInfo' => PageSettingInfo::getBanners('/about')
+        return view('about', ['title' => '關於我們', 'aboutUsInfo' => $aboutUsInfo, 'pageInfo' => PageSettingInfo::getBanners('/about')]);
+        //
     }
 
     /**

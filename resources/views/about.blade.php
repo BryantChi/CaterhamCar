@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<link rel="stylesheet" href="{{ asset('assets/css/about.css') }}"/>
+
 @section('section_content')
     {{-- <section class="section bg-light">
         <div class="container">

@@ -16,7 +16,7 @@
                         <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">關於我們<br>About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('news') ? 'active' : '' }}" href="{{ route('news') }}">最新消息<br>News</a>
+                        <a class="nav-link {{ request()->is('news*') ? 'active' : '' }}" href="{{ route('news') }}">最新消息<br>News</a>
                     </li>
                     {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
     <title>Drive Your Dream | Caterham Cars</title>
@@ -24,7 +24,6 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}"/>
 
 </head>
 

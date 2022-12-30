@@ -80,7 +80,7 @@ class NewsInfoController extends AdminController
             $form->display('id');
             $form->text('title');
             $form->image('news_front_cover')->move('images/news/'.date('Ym').'/frontCover')->maxSize(1024)->rules('mimes:jpg,jpeg,png,gif');
-            $form->text('category')->default('未分類');
+            $form->radio('category')->options(['news' => '新聞消息', 'activity'=> '活動消息'])->default('news');
             $form->editor('content')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
             styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \
             table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']]);

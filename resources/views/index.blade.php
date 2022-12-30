@@ -9,7 +9,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-7 text-center col-sm-12 element-animate">
                         <div class="btn-play-wrap mx-auto">
-                            <p class="mb-4"><a href="https://vimeo.com/59256790" data-fancybox data-ratio="2"
+                            <p class="mb-4"><a href="https://cms.caterhamcars.com/wp-content/uploads/2022/09/SuperSevenFinal_SocialCut_30sec_16.9_1080-1.mp4" data-fancybox data-ratio="2"
                                     class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                         </div>
                         <h1 class="mb-4"><span>The New Super Seven 2000</span></h1>
@@ -24,7 +24,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-7 text-center col-sm-12 element-animate">
                         <div class="btn-play-wrap mx-auto">
-                            <p class="mb-4"><a href="https://vimeo.com/59256790" data-fancybox data-ratio="2"
+                            <p class="mb-4"><a href="https://cms.caterhamcars.com/wp-content/uploads/2022/09/SuperSevenFinal_SocialCut_30sec_16.9_1080-1.mp4" data-fancybox data-ratio="2"
                                     class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                         </div>
                         <h1><span>The New Super Seven 600</span></h1>
@@ -40,7 +40,7 @@
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-7 text-center col-sm-12 element-animate">
                         <div class="btn-play-wrap mx-auto">
-                            <p class="mb-4"><a href="https://vimeo.com/59256790" data-fancybox data-ratio="2"
+                            <p class="mb-4"><a href="https://cms.caterhamcars.com/wp-content/uploads/2021/09/Caterham-170-UK_EU_FINAL.mp4" data-fancybox data-ratio="2"
                                     class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                         </div>
                         <h1><span>CATERHAM SEVEN CHAMPIONSHIP UK TO SUPPORT BTCC AT SILVERSTONE</span></h1>

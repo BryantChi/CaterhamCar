@@ -84,7 +84,10 @@ class CarModelsInfoController extends AdminController
             $form->display('id');
             $form->text('name')->required();
             $form->image('models_front_cover')->move('images/models/'.date('Ym').'/frontCover')->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable');
-            $form->multipleImage('models_img')->move('images/models/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable();
+            $form->multipleImage('models_img')->move('images/models/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable()->saving(function ($v) {
+                // 转化为json格式存储
+                return json_encode($v);
+            });
             $form->list('features')->max(15)->saveAsJson();
             $form->keyValue('specification')->setKeyLabel('主題')->setValueLabel('內容')->saving(function ($v) {
                 // 转化为json格式存储

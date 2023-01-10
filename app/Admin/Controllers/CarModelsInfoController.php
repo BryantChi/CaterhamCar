@@ -85,10 +85,10 @@ class CarModelsInfoController extends AdminController
             $form->text('name')->required();
             $form->image('models_front_cover')->move('images/models/'.date('Ym').'/frontCover')->uniqueName()->rules('mimes:jpg,jpeg,png,gif');
             $form->multipleImage('models_img')->move('images/models/'.date('Ym'))->maxSize(3072)->uniqueName()->rules('mimes:jpg,jpeg,png,gif|nullable')->sortable();
-            $form->list('features')->max(15);
+            $form->list('features')->max(15)->saveAsJson();
             $form->keyValue('specification')->setKeyLabel('主題')->setValueLabel('內容');
-            $form->list('s_pack')->max(15);
-            $form->list('r_pack')->max(15);
+            $form->list('s_pack')->max(15)->saveAsJson();
+            $form->list('r_pack')->max(15)->saveAsJson();
 
             $form->editor('models_discription')->options(['menubar' => false, 'toolbar' => ['code undo redo restoredraft | cut copy paste pastetext | forecolor backcolor bold italic underline strikethrough link anchor | alignleft aligncenter alignright alignjustify outdent indent | \
             styleselect formatselect fontselect fontsizeselect | bullist numlist | blockquote subscript superscript removeformat | \

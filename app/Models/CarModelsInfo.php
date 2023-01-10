@@ -12,6 +12,7 @@ class CarModelsInfo extends Model
     protected $table = 'car_models_infos';
 
     protected $cast = [
+        'models_front_cover' => 'json',
         'models_img' => 'json',
         'features' => 'json',
         'specification' => 'json',

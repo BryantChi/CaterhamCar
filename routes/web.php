@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\CarModelsController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Artisan;
@@ -33,6 +34,9 @@ Route::any('/clear-cache', function () {
 Route::any('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/about', [AboutUsController::class, 'index'])->name('about');
+
+Route::get('/models', [CarModelsController::class, 'index'])->name('models');
+Route::get('/models/{id}', [CarModelsController::class, 'show']);
 
 Route::any('/news', [NewsController::class, 'index'])->name('news');
 Route::any('/news/{id}', [NewsController::class, 'show']);

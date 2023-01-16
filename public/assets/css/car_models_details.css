@@ -1,0 +1,60 @@
+.accordion-button {
+    color: black !important;
+    background-color: #9dd341 !important;
+    font-weight: 700;
+}
+
+.accordion-button:focus {
+    border-color: #9dd341b6 !important;
+    box-shadow: 0 0 0 0.25rem #9dd341b6 !important;
+}
+
+/* .accordion2 .pack-item::before {
+    content: '–';
+    font-family: fontello;
+    position: absolute;
+    left: -10px;
+} */
+.models-content img {
+    /* width: 100%; */
+    max-width: 100%;
+}
+
+.models-content video {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto !important;
+}
+
+.pic {
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.pic img {
+    transform: scale(1, 1);
+    transition: all 1s ease-out;
+}
+
+.pic img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.model-box:hover .search-icon {
+    display: grid !important;
+}
+
+.search-icon {
+    position: absolute;
+    background-color: #5a5a5aac;
+    padding: 15px;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.search-icon span {
+    color: #fff;
+}

@@ -28,7 +28,7 @@
                         </div>
                     </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="/#models">車款介紹<br>Models</a>
+                        <a class="nav-link {{ request()->is('models') ? 'active' : '' }}" href="{{ route('models') }}">車款介紹<br>Models</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">聯絡我們<br>Contact</a>

@@ -33,12 +33,12 @@
                     <div class="col-md-6 p-0 pic d-inline-block w-50 h-auto model-box model-box2">
 
                     </div>
-                    <div class="col-12 p-0 pic d-block model-box model-box3">
+                    <div class="col-12 p-0 pic d-block h-auto model-box model-box3">
 
                     </div>
                 </div>
                 <div class="col-md-6 p-0 m-0 d-table">
-                    <div class="col-12 p-0 pic d-block model-box model-box4">
+                    <div class="col-12 p-0 pic d-block h-auto model-box model-box4">
 
                     </div>
                     <div class="col-md-6 p-0 pic d-inline-block w-50 h-auto model-box model-box5">

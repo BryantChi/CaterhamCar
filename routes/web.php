@@ -6,6 +6,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use App\Admin\Repositories\PageSettingInfo;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +43,6 @@ Route::any('/news', [NewsController::class, 'index'])->name('news');
 Route::any('/news/{id}', [NewsController::class, 'show']);
 
 Route::get('/contact', function() {
-    return view('contact');
+    $pageInfo = PageSettingInfo::getBanners('/contact');
+    return view('contact', ['title' => '聯絡資訊', 'pageInfo' => $pageInfo]);
 })->name('contact');

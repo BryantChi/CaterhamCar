@@ -55,3 +55,8 @@ table tbody tr td {
 table img {
     max-width: 100vmin;
 }
+
+.about-content img {
+    max-width: 100%;
+    height: 100%;
+}

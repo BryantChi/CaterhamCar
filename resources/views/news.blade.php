@@ -30,29 +30,6 @@
                 </div>
                 @endforeach --}}
 
-                <div class="col-lg-4 col-md-6 col-12 mb-4 pb-2">
-                    <div class="card blog-post border-0 rounded shadow overflow-hidden">
-                        <img src="{{ asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}" class="img-fluid news-item-img" alt="">
-                        <div class="card-body content p-4 newinfo-content">
-                            <div class="d-flex">
-                                <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">
-                                    <li class="day shadow2 h6 font-weight-bold mb-2">30</li>
-                                    <li class="month h6 font-weight-bold">Nov</li>
-                                </ul>
-                                <a href="news" class="title text-dark h5 my-auto">test</a>
-                            </div>
-
-                            <div class="post-meta d-flex justify-content-end mt-3">
-                                {{-- <ul class="list-unstyled mb-0">
-                                    <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                    <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                </ul> --}}
-                                <a href="news" class="text-muted readmore">More <i class="fa-solid fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 @foreach ($newInfo as $item)
                 @if ($item->show_status)
                 <div class="col-lg-4 col-md-6 col-12 mb-4 pb-2">

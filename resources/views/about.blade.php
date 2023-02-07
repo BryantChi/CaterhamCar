@@ -57,7 +57,7 @@
                 <div class="col-md-10 pr-md-5 mb-5">
                     <div class="block-41">
                         <h2 class="block-41-heading mb-5 about-title">About Us</h2>
-                        <div class="block-41-text">
+                        <div class="block-41-text about-content">
                             @if ($aboutUsInfo->content != null || $aboutUsInfo->content == "")
                                 {!! $aboutUsInfo->content !!}
                             @endif

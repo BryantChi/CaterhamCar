@@ -82,7 +82,7 @@
 
                             <p class="d-flex">
                                 <span class="ion-android-mail icon mr-5"></span>
-                                <span>info@yourdomain.com</span>
+                                <span>oma@o-ma.com.tw</span>
                             </p>
                         </div>
                     </div>

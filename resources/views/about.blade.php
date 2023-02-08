@@ -72,7 +72,7 @@
                     <img src="{{ asset('assets/img/about/7-badge.svg') }}" class="img-fluid" alt="{{ __('') }}">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 mt-5 mt-md-0">
                     <h4>THE ICONIC SEVEN</h4>
                     Caterham and the Seven have a history that is forever entwined. We are the proud custodians of Seven, the people who know and love this car. We are the passion and engineering behind today’s incarnations of Chapman’s design. Uniquely British and sometimes quirky in our ways, we see it as our duty to push the envelope and boundaries of this little car to its absolute maximum, while retaining the
                 </div>
@@ -80,7 +80,7 @@
                     driving purity and racing spirit that defined the original and made it an icon.
                     Our model range may be one model, and it may not be mainstream. But its nuanced variants encompass everything a true driver wants from a car. From the Sunday cruiser to the track day enthusiast to the wannabe racing driver, you will find a Caterham Seven to suit. And, it’s hand-built, backed by an ideology and heritage that is unequaled in our sector.
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mt-5 mt-md-0">
                     <img src="{{ asset('assets/img/about/the-iconic-seven-1.png') }}" class="img-fluid" alt="{{ __('') }}">
                 </div>
             </div>

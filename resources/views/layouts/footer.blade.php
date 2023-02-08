@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12 text-md-center text-left">
                 <p>
-                    <p class="mb-0 copyright">© 2022 Caterham Cars Ltd. | All rights reserved. <br class="d-md-none d-block">Design by <a href="mailto:bryantchi.work@gmail.com">MWStudio-Bryant</a> .
+                    <p class="mb-0 copyright">© 2022 Caterham Cars Ltd. | All rights reserved. | <br class="d-md-none d-block">Design by <a href="mailto:bryantchi.work@gmail.com">MWStudio-Bryant</a> .
                     </p>
                 </p>
             </div>

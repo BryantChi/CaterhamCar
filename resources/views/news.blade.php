@@ -7,28 +7,16 @@
 
     <section class="section element-animate">
         <div class="container">
+            <div class="text-center mb-5 w-100">
+                <p><a href="{{ route('news.news') }}" class="{{ request()->is('news/news*') ? 'news-active' : '' }}"><span>新聞消息</span></a> | <a href="{{ route('news.activity') }}" class="{{ request()->is('news/activity*') ? 'news-active' : '' }}"><span>活動消息</span></a></p>
+            </div>
+
+            <div class="overflow-auto mb-3">
+                {{ $newInfo->onEachSide(1)->links() }}
+            </div>
+
             <div class="row">
-                <div class="text-center mb-5 w-100">
-                    <p><span>新聞消息</span> | <span>活動消息</span></p>
-                </div>
-                {{-- @foreach ($newInfo as $item)
-                <div class="col-lg-6 mt-4 pt-2">
-                    <div class="card event-schedule rounded border-0 shadow">
-                        <div class="card-body">
-                            <div class="media">
-                                <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">
-                                    <li class="day shadow h6 font-weight-bold mb-2">{{ date("d",strtotime($item->created_at)) }}</li>
-                                    <li class="month h6 font-weight-bold">{{ date("M",strtotime($item->created_at)) }}</li>
-                                </ul>
-                                <div class="media-body content">
-                                    <h5><a href="news/{{ $item->id }}" class="text-dark title">{{ $item->title }}</a></h5>
-                                    <p class="text-muted mb-0">{{ $item->category }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach --}}
+
 
                 @foreach ($newInfo as $item)
                 @if ($item->show_status)

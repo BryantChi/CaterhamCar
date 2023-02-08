@@ -17,9 +17,19 @@ class NewsController extends Controller
     public function index()
     {
         //
-        $newInfo = NewsInfo::orderBy('created_at', 'desc')->limit(15)->get();
+        $newInfo = NewsInfo::orderBy('created_at', 'desc')->paginate(9);
         return view('news', ['newInfo' => $newInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
         //
+    }
+
+    public function getNews() {
+        $newInfo = NewsInfo::where('category', 'news')->orderBy('created_at', 'desc')->paginate(9);
+        return view('news', ['newInfo' => $newInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
+    }
+
+    public function getActivity() {
+        $newInfo = NewsInfo::where('category', 'activity')->orderBy('created_at', 'desc')->paginate(9);
+        return view('news', ['newInfo' => $newInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
     }
 
     /**
@@ -52,7 +62,17 @@ class NewsController extends Controller
     public function show($id)
     {
         //
-        $newsInfo = NewsInfo::find($id);
+        // $newsInfo = NewsInfo::find($id);
+        // return view('news-details', ['newsInfo' => $newsInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
+    }
+
+    public function showNews($id) {
+        $newsInfo = NewsInfo::where('category', 'news')->find($id);
+        return view('news-details', ['newsInfo' => $newsInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
+    }
+
+    public function showActivity($id) {
+        $newsInfo = NewsInfo::where('category', 'activity')->find($id);
         return view('news-details', ['newsInfo' => $newsInfo, 'title' => $this->title, 'pageInfo' => $this->getBanner()]);
     }
 

@@ -40,7 +40,10 @@ Route::get('/models', [CarModelsController::class, 'index'])->name('models');
 Route::get('/models/{id}', [CarModelsController::class, 'show']);
 
 Route::any('/news', [NewsController::class, 'index'])->name('news');
-Route::any('/news/{id}', [NewsController::class, 'show']);
+Route::any('/news/news', [NewsController::class, 'getNews'])->name('news.news');
+Route::any('/news/activity', [NewsController::class, 'getActivity'])->name('news.activity');
+Route::any('/news/news/{id}', [NewsController::class, 'showNews']);
+Route::any('/news/activity/{id}', [NewsController::class, 'showActivity']);
 
 Route::get('/contact', function() {
     $pageInfo = PageSettingInfo::getBanners('/contact');

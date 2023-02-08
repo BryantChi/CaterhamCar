@@ -18,15 +18,13 @@ class ContactMailController extends Controller
             'phone' => $request->input('phone'),
             'email' => $request->input('email'),
             'content' => $request->input('content'),
-            'type' => $request->input('type'),
-            'like' => $request->input('like'),
             'clientMail' => $request->input('clientMail')
         ];
 
         if ($details['clientMail'] == 'true') {
-            $contactmail = Mail::to("kaiyicar@gmail.com")->cc($details['email'])->send(new ContactMail($title, $details));
+            $contactmail = Mail::to("bryantchi.work@gmail.com")->cc($details['email'])->send(new ContactMail($title, $details));
         } else {
-            $contactmail = Mail::to("kaiyicar@gmail.com")->send(new ContactMail($title, $details));
+            $contactmail = Mail::to("bryantchi.work@gmail.com")->send(new ContactMail($title, $details));
         }
 
         if (empty($contactmail)) {
@@ -38,10 +36,10 @@ class ContactMailController extends Controller
         }
 
         /**
-         * 聯絡人：楊俊宏
-         * 聯絡電話：0918247627
-         * Email：steven.yang@auspicestar.com
-         * 聯絡內容：我想知道這台車的報價
+         * 聯絡人：
+         * 聯絡電話：
+         * Email：
+         * 聯絡內容：
          */
     }
 }

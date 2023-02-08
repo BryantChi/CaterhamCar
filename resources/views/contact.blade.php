@@ -17,37 +17,47 @@
                 </div>
 
                 <div class="col-md-6 mb-5 order-2">
-                    <form action="#" method="post">
+                    <form action="" method="post" role="form" name="contactUs">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label for="name">Name</label>
+                                <label for="name">姓名</label>
                                 <input type="text" id="name" class="form-control ">
                             </div>
                             <div class="col-md-6 form-group">
-                                <label for="phone">Phone</label>
+                                <label for="phone">聯絡電話</label>
                                 <input type="text" id="phone" class="form-control ">
                             </div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-md-12 form-group">
 
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="row">
                             <div class="col-md-12 form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control ">
+                                <input type="email" id="email" class="form-control " required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <label for="message">Write Message</label>
-                                <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                                <label for="content">聯絡內容</label>
+                                <textarea name="content" id="content" class="form-control " cols="30" rows="8"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-check mx-3 mb-3">
+                                <input class="form-check-input" type="checkbox" value="true" name="clientMail" id="clientMail">
+                                <label class="form-check-label" for="clientMail">
+                                    發送一封副本至您的郵箱
+                                </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="submit" value="Send Message" class="btn btn-primary px-3 py-3">
+                                {{-- <input type="submit" value="填好送出" class="btn btn-primary px-3 py-3"> --}}
+                                <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                                <input type="submit" id="btnContactUs" value="發送" onclick="contactUsMailSend('{{ Route('ContactUsMail') }}')" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </form>
@@ -59,19 +69,22 @@
                                 <span class="ion-ios-location icon mr-5"></span>
                                 <span>台中市南屯區環中路四段161號<br>
                                     <a href="https://goo.gl/maps/biKuasq6JusbMqXo7" target="_blank"
-                                    class="text-primary">View on Google map</a></span>
+                                        class="text-primary">View on Google map</a></span>
                             </p>
 
                             <p class="d-flex mb-2">
                                 <span class="ion-ios-alarm icon mr-5"></span>
                                 <span>營業時間</span>
-                                <div class="ml-5">
-                                    <ul class="list-unstyled footer-list">
-                                        <li><a href="javascript:void(0)" class="text-foot"><i class="fa-solid fa-clock"></i> <span style="">平日</span>&emsp;AM08:30-PM19:00</a></li>
-                                        <li><a href="javascript:void(0)" class="text-foot">&emsp; <span style="padding-end: 50px;">週六</span>&emsp;AM09:00-PM19:00</a></li>
-                                        <li><a href="javascript:void(0)" class="text-foot">&emsp; <span style="padding-end: 50px;">週日</span>&emsp;AM10:00-PM18:00</a></li>
-                                    </ul>
-                                </div>
+                            <div class="ml-5">
+                                <ul class="list-unstyled footer-list">
+                                    <li><a href="javascript:void(0)" class="text-foot"><i class="fa-solid fa-clock"></i>
+                                            <span style="">平日</span>&emsp;AM08:30-PM19:00</a></li>
+                                    <li><a href="javascript:void(0)" class="text-foot">&emsp; <span
+                                                style="padding-end: 50px;">週六</span>&emsp;AM09:00-PM19:00</a></li>
+                                    <li><a href="javascript:void(0)" class="text-foot">&emsp; <span
+                                                style="padding-end: 50px;">週日</span>&emsp;AM10:00-PM18:00</a></li>
+                                </ul>
+                            </div>
 
                             </p>
 
@@ -90,4 +103,62 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function contactUsMailSend(src) {
+            if ($("#name").val() == "" || $("#phone").val() == "" || $("#email").val() == "" || $("#content").val() == "") {
+                swal("錯誤！", "欄位請勿空白！！！", "error");
+                return;
+            }
+            $("#btnContactUs").val("sending...");
+            $("#btnContactUs").attr("disabled", true);
+
+            swal({
+                title: "確定送出？",
+                // html: "按下確定後資料會永久刪除",
+                type: "question",
+                showCancelButton: true //顯示取消按鈕
+            }).then(
+                function(result) {
+                    if (result.value) {
+
+                        $.ajax({
+                            url: src,
+                            type: 'POST',
+                            // headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                            data: $('form[name="contactUs"]').serialize(),
+                            // {
+                            //     _token: '{{ csrf_token() }}'
+                            // },
+                            success: function(res) {
+                                var obj = $.parseJSON(res);
+                                if (obj.status == "success") {
+                                    swal("成功!", "聯絡信件已送出", "success").then(
+                                        function(result) {
+                                            if (result.value) {
+                                                window.location.reload();
+                                            }
+                                        }
+                                    );
+                                } else {
+                                    swal("錯誤!", "程序失敗", "error").then(
+                                        function(result) {
+                                            $("#btnContactUs").val("發送");
+                                            $("#btnContactUs").attr("disabled", false);
+                                        });
+                                }
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                // $("#btnContactUs").html("發送");
+                                // $("#btnContactUs").attr("disabled", false);
+                                window.location.reload();
+                            }
+                        });
+                    } else if (result.dismiss === "cancel") {
+                        //使用者按下「取消」要做的事
+                        swal("取消", "尚未送出", "error");
+                    } //end else
+                }); //end then
+        }
+    </script>
 @endsection

@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Admin\Repositories\PageSettingInfo;
+use App\Http\Controllers\ContactMailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +50,5 @@ Route::get('/contact', function() {
     $pageInfo = PageSettingInfo::getBanners('/contact');
     return view('contact', ['title' => '聯絡資訊', 'pageInfo' => $pageInfo]);
 })->name('contact');
+
+Route::any('/ContactUs/MailSend', [ContactMailController::class, 'contactMail'])->name('ContactUsMail');

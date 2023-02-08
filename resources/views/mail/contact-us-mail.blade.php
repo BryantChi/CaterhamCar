@@ -9,8 +9,6 @@ your order detail is as below --}}
 姓名 : {{ $details['name'] }}<br/>
 聯絡電話 : {{ $details['phone'] }}<br/>
 Email : {{ $details['email'] }}<br/>
-洽詢項目 : {{ $details['type'] }}<br/>
-喜歡的車種 : {{ $details['like']}}<br/>
 聯絡內容 : {{ $details['content'] }}<br/>
 <br/>
 {{-- Thank you<br/>

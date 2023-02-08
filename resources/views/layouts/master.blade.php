@@ -2,9 +2,11 @@
 <html lang="zh-tw">
 
 <head>
-    <title>Drive Your Dream | Caterham Cars</title>
+    <title>{{ $pageInfo->title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="{{ $pageInfo->description }}"/>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
 

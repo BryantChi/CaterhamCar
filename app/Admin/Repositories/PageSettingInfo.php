@@ -15,14 +15,21 @@ class PageSettingInfo extends EloquentRepository
     protected $eloquentClass = Model::class;
 
     public static function getHomeBanner() {
-        $pageInfo = Model::where('page_url', '=', '/index')->get();
-        return $pageInfo;
+        $pageInfos = Model::where('page_url', '=', '/index')->first();
+        $pageInfoIndex = new \stdClass();
+        $pageInfoIndex->title = $pageInfos->page_title;
+        $pageInfoIndex->description = $pageInfos->page_meta_description;
+        return $pageInfoIndex;
     }
 
     public static function getBanners($uri)
     {
         $pageInfos = Model::where('page_url', '=', $uri)->first();
         $pageInfo = new \stdClass();
+
+        $pageInfo->title = $pageInfos->page_title;
+
+        $pageInfo->description = $pageInfos->page_meta_description;
 
         $count = count($pageInfos->page_banner_img);
 

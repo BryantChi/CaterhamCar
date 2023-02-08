@@ -29,7 +29,7 @@
                                     <li class="day shadow2 h6 font-weight-bold mb-2">{{ date("d",strtotime($item->created_at)) }}</li>
                                     <li class="month h6 font-weight-bold">{{ date("M",strtotime($item->created_at)) }}</li>
                                 </ul>
-                                <a href="news/{{ $item->id }}" class="title text-dark h5 my-auto">{{ $item->title }}</a>
+                                <a href="news/{{ $item->category.'/'.$item->id }}" class="title text-dark h5 my-auto">{{ $item->title }}</a>
                             </div>
 
                             <div class="post-meta d-flex justify-content-end mt-3">
@@ -37,7 +37,7 @@
                                     <li class="list-inline-item mr-2 mb-0"><a href="javascript:void(0)" class="text-muted like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
                                     <li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
                                 </ul> --}}
-                                <a href="news/{{ $item->id }}" class="text-muted readmore">More <i class="fa-solid fa-angle-right"></i></a>
+                                <a href="news/{{ $item->category.'/'.$item->id }}" class="text-muted readmore">More <i class="fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

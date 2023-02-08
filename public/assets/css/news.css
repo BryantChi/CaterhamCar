@@ -12,6 +12,16 @@
     height: auto !important;
 }
 
+.news-tab a {
+    color: #6c757d;
+}
+
+.news-tab a:hover, .news-tab a:focus {
+    /* color: #b14200; */
+    color: #9dd341 !important;
+}
+
 .news-active {
-    color: #b14200;
+    /* color: #b14200; */
+    color: #9dd341 !important;
 }

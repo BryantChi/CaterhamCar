@@ -8,7 +8,7 @@
     <section class="section element-animate">
         <div class="container">
             <div class="text-center mb-5 w-100">
-                <p><a href="{{ route('news.news') }}" class="{{ request()->is('news/news*') ? 'news-active' : '' }}"><span>新聞消息</span></a> | <a href="{{ route('news.activity') }}" class="{{ request()->is('news/activity*') ? 'news-active' : '' }}"><span>活動消息</span></a></p>
+                <h5><a href="{{ route('news.news') }}" class="{{ request()->is('news/news*') ? 'news-active' : '' }}"><span>新聞消息</span></a> ｜ <a href="{{ route('news.activity') }}" class="{{ request()->is('news/activity*') ? 'news-active' : '' }}"><span>活動消息</span></a></h5>
             </div>
 
             <div class="overflow-auto mb-3">

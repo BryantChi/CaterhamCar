@@ -86,7 +86,13 @@ class NewsInfoController extends AdminController
             table image media charmap emoticons hr pagebreak insertdatetime print preview | fullscreen | bdmap indent2em lineheight formatpainter axupimgs']]);
             $form->switch('show_status');
 
-            $form->datetime('created_at')->format('YYYY-MM-DD HH:mm:ss');
+
+            if ($form->isCreating()) {
+                $form->datetime('created_at')->format('YYYY-MM-DD HH:mm:ss')->default(date("Y-m-d H:i:s"));
+            } else {
+                $form->datetime('created_at')->format('YYYY-MM-DD HH:mm:ss');
+            }
+
             $form->display('updated_at');
         });
     }

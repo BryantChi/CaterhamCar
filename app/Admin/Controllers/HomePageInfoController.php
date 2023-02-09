@@ -78,10 +78,10 @@ class HomePageInfoController extends AdminController
             $form->display('id');
             // $form->text('slide_setting');
             $form->array('slide_setting', function ($table) {
-                $table->text('title', __('標題'));
-                $table->text('sub_title', __('副標題'));
-                $table->image('slide_img', __('圖片'))->move('images/slide/'.date('Ym'))->maxSize(1024)->rules('mimes:jpg,jpeg,png,gif');
-                $table->url('video_url', __('YouTube影片網址'));
+                $table->text('title');
+                $table->text('sub_title');
+                $table->image('slide_img')->move('images/slide/'.date('Ym'))->maxSize(1024);
+                $table->url('video_url');
             })->saving(function ($v) {
                 // 转化为json格式存储
                 return json_encode($v);

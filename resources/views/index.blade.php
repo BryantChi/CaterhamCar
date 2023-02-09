@@ -4,7 +4,26 @@
     <div class="top-shadow"></div>
 
     <section class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url('{{ asset('assets/img/hero/super-seven-hero-v2-1.jpg') }}');">
+        @foreach ($slide as $item)
+            <div class="slider-item" style="background-image: url('{{ $item->slide_img }}');">
+                <div class="container">
+                    <div class="row slider-text align-items-center justify-content-center">
+                        <div class="col-lg-7 text-center col-sm-12 element-animate">
+                            @if ($item->video_url != null && $item->video_url != '')
+                                <div class="btn-play-wrap mx-auto">
+                                    <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
+                                            class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+                                </div>
+                            @endif
+                            <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
+                            <p class="mb-5 w-75">{{ $item->sub_title }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+
+        {{-- <div class="slider-item" style="background-image: url('{{ asset('assets/img/hero/super-seven-hero-v2-1.jpg') }}');">
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-7 text-center col-sm-12 element-animate">
@@ -17,9 +36,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="slider-item" style="background-image: url('{{ asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}');">
+
+        {{-- <div class="slider-item" style="background-image: url('{{ asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}');">
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-7 text-center col-sm-12 element-animate">
@@ -49,7 +69,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
 
     </section>
     <!-- END slider -->

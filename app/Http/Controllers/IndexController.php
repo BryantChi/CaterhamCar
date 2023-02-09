@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Admin\Repositories\PageSettingInfo as PageSettingRepository;
+use App\Models\HomePageInfo;
+use Illuminate\Support\Arr;
 
 class IndexController extends Controller
 {
@@ -15,7 +17,10 @@ class IndexController extends Controller
     public function index()
     {
         //
-        return view('index', ['pageInfo' => $this->getBanner()]);
+        $homePageInfo = HomePageInfo::first();
+        $slide = array();
+        $slide = json_decode($homePageInfo->slide_setting);
+        return view('index', ['pageInfo' => $this->getBanner(), 'slide' => $slide]);
         // return view('index');
     }
 

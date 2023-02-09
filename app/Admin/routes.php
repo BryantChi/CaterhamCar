@@ -19,5 +19,6 @@ Route::group([
     $router->resource('/page_settings', 'PageSettingInfoController');
     $router->resource('/base_setting', 'BaseSettingInfoController');
     $router->resource('/models', 'CarModelsInfoController');
+    $router->resource('/home_page_setting', 'HomePageInfoController');
 
 });

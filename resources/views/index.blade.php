@@ -9,12 +9,10 @@
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
                         <div class="col-lg-7 text-center col-sm-12 element-animate">
-                            @if ($item->video_url != null && $item->video_url != '')
-                                <div class="btn-play-wrap mx-auto">
-                                    <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
-                                            class="btn-play"><span class="ion ion-ios-play"></span></a></p>
-                                </div>
-                            @endif
+                            <div class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none'; }}">
+                                <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
+                                        class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+                            </div>
                             <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
                             <p class="mb-5 w-75">{{ $item->sub_title }}</p>
                         </div>

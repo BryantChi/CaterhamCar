@@ -82,7 +82,10 @@ class HomePageInfoController extends AdminController
                 $table->text('sub_title', __('副標題'));
                 $table->image('slide_img', __('圖片'))->move('images/slide/'.date('Ym'))->maxSize(1024)->rules('mimes:jpg,jpeg,png,gif');
                 $table->url('video_url', __('YouTube影片網址'));
-            })->saveAsJson();
+            })->saving(function ($v) {
+                // 转化为json格式存储
+                return json_encode($v);
+            });
 
             $form->display('created_at');
             $form->display('updated_at');

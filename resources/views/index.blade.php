@@ -5,11 +5,13 @@
 
     <section class="home-slider owl-carousel">
         @foreach ($slide as $item)
-            <div class="slider-item" style="background-image: url('{{ 'uploads/'.$item->slide_img }}');">
+            <div class="slider-item"
+                style="background-image: url('{{ 'http://sunlight-camp.com.tw/uploads/' . $item->slide_img }}');">
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
                         <div class="col-lg-7 text-center col-sm-12 element-animate">
-                            <div class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none'; }}">
+                            <div
+                                class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
                                 <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
                                         class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                             </div>
@@ -71,4 +73,23 @@
 
     </section>
     <!-- END slider -->
+    <script>
+        $(function(){
+            $('.btn-play').click(function() {
+                $('.home-slider').trigger('stop.owl.autoplay');
+            });
+            // $('.fancybox-button').click(function() {
+            //     $('.home-slider').trigger('play.owl.autoplay',[1000]);
+            // });
+            // if ($(".fancybox-container").length == 0) {
+            //     $('.home-slider').trigger('play.owl.autoplay');
+            // }
+            $('body').on('DOMNodeRemoved', '.fancybox-container', function (e) {
+                //console.log(e.target);
+                // console.log('removed!');
+                $('.home-slider').trigger('play.owl.autoplay');
+            });
+        })
+
+    </script>
 @endsection

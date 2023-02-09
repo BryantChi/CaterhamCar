@@ -247,7 +247,7 @@
             {
                 breakpoint: 768,
                 settings: {
-                  arrows: true,
+                    arrows: true,
                     slidesToShow: 2,
                     slidesToScroll: 2,
                 },
@@ -255,11 +255,24 @@
             {
                 breakpoint: 576,
                 settings: {
-                  arrows: true,
+                    arrows: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 },
             },
         ],
     });
+
+    $(".hero-slick").slick({
+        arrows: true,
+        dots: true,
+        speed: 3000,
+        autoplay: true,
+        centerPadding: "100px",
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+    });
+
 })(jQuery);

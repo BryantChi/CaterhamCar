@@ -54,7 +54,7 @@
         </svg></div>
 
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
-    <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

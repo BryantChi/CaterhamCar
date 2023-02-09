@@ -9604,11 +9604,17 @@ textarea.form-control {
 
 /* Header */
 header {
-    position: absolute;
+    position: fixed;
     /* top: 30px; */
     left: 0;
     width: 100%;
     z-index: 5;
+    background: linear-gradient(
+        to bottom,
+        black 0%,
+        /* rgba(120, 120, 120, 0.5) 50%, */
+        rgba(145, 232, 66, 0) 100%
+    );
 }
 @media (max-width: 1199.98px) {
     header {
@@ -9981,7 +9987,7 @@ header .search-form .form-control {
     top: 0;
     height: 500px;
     width: 100%;
-    background: black;
+    /* background: black;
     background: -moz-linear-gradient(top, black 0%, rgba(145, 232, 66, 0) 100%);
     background: -webkit-gradient(
         left top,
@@ -10002,12 +10008,12 @@ header .search-form .form-control {
         left bottom,
         from(black),
         to(rgba(145, 232, 66, 0))
-    );
-    background: linear-gradient(
+    ); */
+    /* background: linear-gradient(
         to bottom,
         black 0%,
         rgba(145, 232, 66, 0) 100%
-    );
+    ); */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#91e842', GradientType=0 );
 }
 .slider-item .slider-text {

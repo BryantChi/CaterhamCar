@@ -6,7 +6,7 @@
     <section class="home-slider owl-carousel">
         @foreach ($slide as $item)
             <div class="slider-item"
-                style="background-image: url('{{ 'http://sunlight-camp.com.tw/uploads/' . $item->slide_img }}');">
+                style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
                         <div class="col-lg-7 text-center col-sm-12 element-animate">

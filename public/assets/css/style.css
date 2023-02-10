@@ -10032,7 +10032,7 @@ header .search-form .form-control {
     font-weight: 300 !important;
     text-transform: uppercase;
     margin-bottom: 30px;
-    margin-left: 0.5em;
+    /* margin-left: 0.5em; */
 }
 @media (max-width: 991.98px) {
     .slider-item .slider-text h1 {

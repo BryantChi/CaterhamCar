@@ -13,6 +13,7 @@ class HomePageInfo extends Model
 
     protected $casts = [
         'slide_setting' => 'json',
+        'slide_setting_mob' => 'json',
     ];
 
 }

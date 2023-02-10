@@ -20,7 +20,9 @@ class IndexController extends Controller
         $homePageInfo = HomePageInfo::first();
         $slide = array();
         $slide = json_decode($homePageInfo->slide_setting);
-        return view('index', ['pageInfo' => $this->getBanner(), 'slide' => $slide]);
+        $slide_mob = array();
+        $slide_mob = json_decode($homePageInfo->slide_setting_mob);
+        return view('index', ['pageInfo' => $this->getBanner(), 'slide' => $slide, 'slide_mob' => $slide_mob]);
         // return view('index');
     }
 

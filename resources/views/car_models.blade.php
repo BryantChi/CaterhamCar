@@ -1,5 +1,5 @@
 @extends('layouts.master')
-<link rel="stylesheet" href="{{ asset('assets/css/car_models.css') }}"/>
+<link rel="stylesheet" href="{{ asset('assets/css/car_models.css') }}?v=20230210"/>
 @section('section_content')
     @include('layouts.sub_hero')
 

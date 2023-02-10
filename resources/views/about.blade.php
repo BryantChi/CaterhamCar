@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-<link rel="stylesheet" href="{{ asset('assets/css/about.css') }}"/>
+<link rel="stylesheet" href="{{ asset('assets/css/about.css') }}?v=20230210"/>
 
 @section('section_content')
     {{-- <section class="section bg-light">

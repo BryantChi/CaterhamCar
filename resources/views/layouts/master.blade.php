@@ -29,7 +29,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=20230210">
 
 </head>
 
@@ -73,7 +73,7 @@
     <!--引用SweetAlert2.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.all.js"></script>
 
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}?v=20230210"></script>
 
 </body>
 

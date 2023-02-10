@@ -1,7 +1,7 @@
 <div class="top-shadow"></div>
 <div class="inner-page d-none d-md-block">
     @if ($pageInfo->banner_img != '')
-    <div class="slider-item" style="background-image: url('{{ url('uploads/' . $pageInfo->banner_img) }}');">
+    <div class="slider-item" style="background-image: url('{{ env('APP_URL') . '/uploads/' . $pageInfo->banner_img }}');">
 
         <div class="container">
             <div class="row slider-text align-items-center justify-content-center">

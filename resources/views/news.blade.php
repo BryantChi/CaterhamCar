@@ -22,7 +22,7 @@
                 @if ($item->show_status)
                 <div class="col-lg-4 col-md-6 col-12 mb-4 pb-2">
                     <div class="card blog-post border-0 rounded shadow overflow-hidden h-100">
-                        <img src="{{ $item->news_front_cover != '' ? url('uploads/' . $item->news_front_cover) : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}" class="img-fluid news-item-img" alt="">
+                        <img src="{{ $item->news_front_cover != '' ? env('APP_URL') . '/uploads/' . $item->news_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}" class="img-fluid news-item-img" alt="">
                         <div class="card-body content p-4 newinfo-content">
                             <div class="d-flex">
                                 <ul class="date text-center text-primary mr-3 mb-0 list-unstyled">

@@ -5,18 +5,22 @@
 
     <section class="home-slider owl-carousel {{ $slide_mob != null || $slide_mob != '' ? 'd-none d-md-block' : '' }}">
         @foreach ($slide as $item)
-            <div class="slider-item"
-                style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
+            <div class="slider-item" style="background-image: url('{{ env('APP_URL') . '/uploads/' . $item->slide_img }}');">
                 <div class="container">
                     <div class="row slider-text align-items-center justify-content-center">
-                        <div class="col-lg-7 text-center col-sm-12 element-animate">
-                            <div
+                        <div class="col-lg-7 text-center col-sm-12 element-animate pt-5">
+                            {{-- <div
                                 class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
                                 <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
                                         class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+                            </div> --}}
+                            <h1 class="mb-4 mt-5 pt-5"><span>{{ $item->title }}</span></h1>
+                            <p class="mb-3 w-75">{{ $item->sub_title }}</p>
+                            <div
+                                class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
+                                <p class="mb-5"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
+                                        class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                             </div>
-                            <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
-                            <p class="mb-5 w-75">{{ $item->sub_title }}</p>
                         </div>
                     </div>
                 </div>
@@ -76,18 +80,22 @@
     @if ($slide_mob != null || $slide_mob != '')
         <section class="home-slider owl-carousel d-block d-md-none">
             @foreach ($slide_mob as $item)
-                <div class="slider-item"
-                    style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
+                <div class="slider-item" style="background-image: url('{{ env('APP_URL') . '/uploads/' . $item->slide_img }}');">
                     <div class="container">
                         <div class="row slider-text align-items-center justify-content-center">
-                            <div class="col-lg-7 text-center col-sm-12 element-animate">
-                                <div
+                            <div class="col-lg-7 text-center col-sm-12 element-animate pt-5">
+                                {{-- <div
                                     class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
                                     <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
                                             class="btn-play"><span class="ion ion-ios-play"></span></a></p>
-                                </div>
+                                </div> --}}
                                 <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
-                                <p class="mb-5 w-75">{{ $item->sub_title }}</p>
+                                <p class="mb-3 w-75">{{ $item->sub_title }}</p>
+                                <div
+                                    class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
+                                    <p class="mb-5"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
+                                            class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -97,7 +105,7 @@
     @endif
     <!-- END slider -->
     <script>
-        $(function(){
+        $(function() {
             $('.btn-play').click(function() {
                 $('.home-slider').trigger('stop.owl.autoplay');
             });
@@ -107,12 +115,11 @@
             // if ($(".fancybox-container").length == 0) {
             //     $('.home-slider').trigger('play.owl.autoplay');
             // }
-            $('body').on('DOMNodeRemoved', '.fancybox-container', function (e) {
+            $('body').on('DOMNodeRemoved', '.fancybox-container', function(e) {
                 //console.log(e.target);
                 // console.log('removed!');
                 $('.home-slider').trigger('play.owl.autoplay');
             });
         })
-
     </script>
 @endsection

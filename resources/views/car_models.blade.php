@@ -13,7 +13,7 @@
                         @foreach ($modelsInfo as $model)
                             <div class="swiper-slide2 models-box px-2">
                                 <a href="/models/{{ $model->id }}">
-                                    <img src="{{ $model->models_front_cover != '' ? 'http://sunlight-camp.com.tw/uploads/' . $model->models_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}"
+                                    <img src="{{ $model->models_front_cover != '' ? env('APP_URL') . '/uploads/' . $model->models_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}"
                                         class="img-fluid mb-3" alt="{{ __('') }}">
                                     <h5>{{ $model->name }}</h5>
                                     <span></span>

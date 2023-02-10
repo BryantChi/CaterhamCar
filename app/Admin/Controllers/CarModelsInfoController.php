@@ -26,10 +26,10 @@ class CarModelsInfoController extends AdminController
             $grid->column('name');
             $grid->column('models_front_cover')->image();
             $grid->column('models_img')->hide();
-            $grid->column('features');
-            $grid->column('specification');
-            $grid->column('s_pack');
-            $grid->column('r_pack');
+            $grid->column('features')->hide();
+            $grid->column('specification')->hide();
+            $grid->column('s_pack')->hide();
+            $grid->column('r_pack')->hide();
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 

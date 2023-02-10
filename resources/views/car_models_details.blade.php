@@ -151,9 +151,10 @@
         }
 
         var imgArr = <?php echo $modelsInfo->models_img; ?>;
+        var env_url = <?php echo env('APP_URL') . '/uploads/' ?>;
         $.each(donearr(6, imgArr), function(index, value) {
-            $('.model-box' + (index + 1)).append('<a href="http://sunlight-camp.com.tw/uploads/'+ value +'" data-fancybox>' +
-                '<img src="http://sunlight-camp.com.tw/uploads/'+ value +'" class="img-fluid model-img" alt="">' +
+            $('.model-box' + (index + 1)).append('<a href="' + env_url + value +'" data-fancybox>' +
+                '<img src="' + env_url + value +'" class="img-fluid model-img" alt="">' +
                 '<div class="search-icon d-none"><span><i class="fas fa-search"></i></span></div>' +
                 '</a>');
         });

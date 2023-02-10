@@ -14,7 +14,7 @@
                                 <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
                                         class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                             </div> --}}
-                            <h1 class="mb-4 mt-5 pt-5"><span>{{ $item->title }}</span></h1>
+                            <h1 class="mb-4 mt-5 pt-5 mx-3"><span>{{ $item->title }}</span></h1>
                             <p class="mb-4 w-75">{{ $item->sub_title }}</p>
                             <div
                                 class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
@@ -89,7 +89,7 @@
                                     <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
                                             class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                                 </div> --}}
-                                <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
+                                <h1 class="mb-4 mx-3"><span>{{ $item->title }}</span></h1>
                                 <p class="mb-4 w-75">{{ $item->sub_title }}</p>
                                 <div
                                     class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">

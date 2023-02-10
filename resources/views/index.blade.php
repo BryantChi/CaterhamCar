@@ -3,7 +3,7 @@
 @section('section_content')
     <div class="top-shadow"></div>
 
-    <section class="home-slider owl-carousel d-none d-md-block">
+    <section class="home-slider owl-carousel {{ $slide != null || $slide != '' ? 'd-none d-md-block' : '' }}">
         @foreach ($slide as $item)
             <div class="slider-item"
                 style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
@@ -72,26 +72,29 @@
         </div> --}}
 
     </section>
-    <section class="home-slider owl-carousel d-block d-md-none">
-        @foreach ($slide_mob as $item)
-            <div class="slider-item"
-                style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
-                <div class="container">
-                    <div class="row slider-text align-items-center justify-content-center">
-                        <div class="col-lg-7 text-center col-sm-12 element-animate">
-                            <div
-                                class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
-                                <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
-                                        class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+
+    @if ($slide != null || $slide != '')
+        <section class="home-slider owl-carousel d-block d-md-none">
+            @foreach ($slide_mob as $item)
+                <div class="slider-item"
+                    style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
+                    <div class="container">
+                        <div class="row slider-text align-items-center justify-content-center">
+                            <div class="col-lg-7 text-center col-sm-12 element-animate">
+                                <div
+                                    class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
+                                    <p class="mb-4"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"
+                                            class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+                                </div>
+                                <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
+                                <p class="mb-5 w-75">{{ $item->sub_title }}</p>
                             </div>
-                            <h1 class="mb-4"><span>{{ $item->title }}</span></h1>
-                            <p class="mb-5 w-75">{{ $item->sub_title }}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
-    </section>
+            @endforeach
+        </section>
+    @endif
     <!-- END slider -->
     <script>
         $(function(){

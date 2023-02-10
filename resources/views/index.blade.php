@@ -3,7 +3,7 @@
 @section('section_content')
     <div class="top-shadow"></div>
 
-    <section class="home-slider owl-carousel {{ $slide != null || $slide != '' ? 'd-none d-md-block' : '' }}">
+    <section class="home-slider owl-carousel {{ $slide_mob != null || $slide_mob != '' ? 'd-none d-md-block' : '' }}">
         @foreach ($slide as $item)
             <div class="slider-item"
                 style="background-image: url('{{ 'uploads/' . $item->slide_img }}');">
@@ -73,7 +73,7 @@
 
     </section>
 
-    @if ($slide != null || $slide != '')
+    @if ($slide_mob != null || $slide_mob != '')
         <section class="home-slider owl-carousel d-block d-md-none">
             @foreach ($slide_mob as $item)
                 <div class="slider-item"

@@ -10041,7 +10041,8 @@ header .search-form .form-control {
 }
 .slider-item .slider-text p {
     font-size: 20px;
-    line-height: 1.5;
+    /* line-height: 1.5; */
+    line-height: 0;
     font-weight: 300;
     color: white;
     margin: 0 auto;

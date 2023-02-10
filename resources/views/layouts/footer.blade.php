@@ -5,10 +5,10 @@
                 <h3 class="text-light">SOCIAL MEDIA</h3>
                 <p class="mb-2">Follow us through our social media channels to get up to the minute news and insight in Caterham.</p>
                 <ul class="list-unstyled footer-link d-flex footer-social justify-content-center">
-                    <li><a href="https://www.facebook.com/CaterhamTaiwan" class="p-2"><span class="fa-brands fa-facebook-f"></span></a></li>
+                    <li><a href="{{ $pageInfo->fb }}" class="p-2"><span class="fa-brands fa-facebook-f"></span></a></li>
                     {{-- <li><a href="#" class="p-2"><span class="fa-brands fa-twitter"></span></a></li>
                     <li><a href="#" class="p-2"><span class="fa-brands fa-youtube"></span></a></li> --}}
-                    <li><a href="https://www.instagram.com/caterham_taiwan" class="p-2"><span class="fa-brands fa-instagram"></span></a></li>
+                    <li><a href="{{ $pageInfo->ig }}" class="p-2"><span class="fa-brands fa-instagram"></span></a></li>
                 </ul>
 
             </div>

@@ -3,6 +3,7 @@
 namespace App\Admin\Repositories;
 
 use App\Models\PageSettingInfo as Model;
+use App\Models\BaseSettingInfo as BaseSetting;
 use Dcat\Admin\Repositories\EloquentRepository;
 
 class PageSettingInfo extends EloquentRepository
@@ -16,15 +17,23 @@ class PageSettingInfo extends EloquentRepository
 
     public static function getHomeBanner() {
         $pageInfos = Model::where('page_url', '=', '/index')->first();
+        $baseInfos = BaseSetting::first();
         $pageInfoIndex = new \stdClass();
         $pageInfoIndex->title = $pageInfos->page_title;
         $pageInfoIndex->description = $pageInfos->page_meta_description;
+        $pageInfoIndex->fb = $baseInfos->facebook;
+        $pageInfoIndex->ig = $baseInfos->instagram;
+        $pageInfoIndex->line = $baseInfos->line;
+        $pageInfoIndex->address = $baseInfos->address;
+        $pageInfoIndex->phone = $baseInfos->phone;
+        $pageInfoIndex->fax = $baseInfos->fax;
         return $pageInfoIndex;
     }
 
     public static function getBanners($uri)
     {
         $pageInfos = Model::where('page_url', '=', $uri)->first();
+        $baseInfos = BaseSetting::first();
         $pageInfo = new \stdClass();
 
         $pageInfo->title = $pageInfos->page_title;
@@ -50,6 +59,12 @@ class PageSettingInfo extends EloquentRepository
         }
         $pageInfo->banner_img = $random_img;
         $pageInfo->banner_img_mob = $random_img_mob;
+        $pageInfo->fb = $baseInfos->facebook;
+        $pageInfo->ig = $baseInfos->instagram;
+        $pageInfo->line = $baseInfos->line;
+        $pageInfo->address = $baseInfos->address;
+        $pageInfo->phone = $baseInfos->phone;
+        $pageInfo->fax = $baseInfos->fax;
 
         return $pageInfo;
     }

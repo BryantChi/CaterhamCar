@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<img src="/vendor/dcat-admin/images/logo.png" width="35"> &nbsp;CATERHAMCAR',
+    'logo' => '<img src="/assets/img/caterham-logo.png" class="img-fluid" style="width: 75% !important;max-width: 100% !important;max-height: 100% !important;">',
 
     /*
     |--------------------------------------------------------------------------

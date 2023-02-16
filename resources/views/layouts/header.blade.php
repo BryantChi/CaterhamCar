@@ -1,7 +1,10 @@
 <header role="banner">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('assets/img/caterham-logo-W.png') }}" class="img-fluid" width="168" alt="{{ __('caterham') }}"></a>
+            <a class="navbar-brand" href="{{ route('index') }}">
+                <img src="{{ asset('assets/img/caterham-sm-logo.png') }}" class="img-fluid" width="50" alt="{{ __('caterham') }}">
+                <img src="{{ asset('assets/img/caterham-logo-W.png') }}" class="img-fluid" width="168" alt="{{ __('caterham') }}">
+            </a>
             {{-- caterham --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
                 aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">

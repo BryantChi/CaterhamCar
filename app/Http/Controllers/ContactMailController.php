@@ -22,9 +22,9 @@ class ContactMailController extends Controller
         ];
 
         if ($details['clientMail'] == 'true') {
-            $contactmail = Mail::to("oma@o-ma.com.tw")->cc($details['email'])->send(new ContactMail($title, $details));
+            $contactmail = Mail::to("gary.tsai@o-ma.com.tw")->cc($details['email'])->send(new ContactMail($title, $details));
         } else {
-            $contactmail = Mail::to("oma@o-ma.com.tw")->send(new ContactMail($title, $details));
+            $contactmail = Mail::to("gary.tsai@o-ma.com.tw")->send(new ContactMail($title, $details));
         }
 
         if (empty($contactmail)) {

@@ -8,11 +8,13 @@ return [
         'name' => '名稱',
         'models_front_cover' => '封面',
         'models_img' => '圖片',
+        'category' => '分類',
         'features' => '特色',
         'specification' => '規格',
         's_pack' => 'S PACK',
         'r_pack' => 'R PACK',
-        'models_discription' => '車款描述'
+        'models_discription' => '車款描述',
+        'order' => '排序'
     ],
     'options' => [
     ],

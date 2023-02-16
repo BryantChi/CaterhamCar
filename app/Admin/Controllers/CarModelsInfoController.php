@@ -22,10 +22,13 @@ class CarModelsInfoController extends AdminController
             $grid->showColumnSelector();
             // 显示快捷编辑按钮
             $grid->showQuickEditButton();
+            $grid->model()->orderBy('order');
+            $grid->sortable('order');
             $grid->column('id')->sortable();
             $grid->column('name');
             $grid->column('models_front_cover')->image();
             $grid->column('models_img')->hide();
+            $grid->column('category');
             $grid->column('features')->hide();
             $grid->column('specification')->hide();
             $grid->column('s_pack')->hide();
@@ -63,6 +66,7 @@ class CarModelsInfoController extends AdminController
             $show->field('name');
             $show->field('models_front_cover')->image();
             $show->field('models_img')->image();
+            $show->field('category');
             $show->field('features');
             $show->field('specification');
             $show->field('s_pack');
@@ -88,6 +92,7 @@ class CarModelsInfoController extends AdminController
                 // 转化为json格式存储
                 return json_encode($v);
             });
+            $form->text('category');
             $form->list('features')->max(15)->saveAsJson();
             $form->keyValue('specification')->setKeyLabel('主題')->setValueLabel('內容')->saving(function ($v) {
                 // 转化为json格式存储

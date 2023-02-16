@@ -95,12 +95,19 @@
 
                             <p class="d-flex">
                                 <span class="ion-android-mail icon mr-5"></span>
-                                <span>oma@o-ma.com.tw</span>
+                                <span>gary.tsai@o-ma.com.tw</span>
+                            </p>
+                            <p>
+                                <img src="{{ asset('assets/img/contact-card.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <hr>
+
+
         </div>
     </section>
 

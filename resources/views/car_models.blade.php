@@ -16,7 +16,7 @@
                                     <img src="{{ $model->models_front_cover != '' ? env('APP_URL') . '/uploads/' . $model->models_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}"
                                         class="img-fluid mb-3" alt="{{ __('') }}">
                                     <h5>{{ $model->name }}</h5>
-                                    <span></span>
+                                    <span>{{ $model->category != '' || $model->category != null ? $model->category : ''}}</span>
                                 </a>
                             </div>
                         @endforeach

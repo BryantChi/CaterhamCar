@@ -118,7 +118,7 @@
                         </a>
                     </div>
                     <div class="col-md col-6 mb-3 mx-0 px-1">
-                        <a href="https://www.airstreamtw.com" target="_blank">
+                        <a href="httpㄋ://www.airstreamtw.com" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_02.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>

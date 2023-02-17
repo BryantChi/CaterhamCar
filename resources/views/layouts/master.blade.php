@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="{{ $pageInfo->description }}"/>
+    <meta name="description" content="{{ $pageInfo->description }}" />
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oxygen:400,700" rel="stylesheet">
 
@@ -31,7 +31,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Theme Style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=20230210.1">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=20230217">
 
 </head>
 
@@ -54,7 +54,10 @@
                 stroke="#eeeeee" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4"
                 stroke-miterlimit="10" stroke="#f4b214" />
-        </svg></div>
+        </svg>
+    </div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
 
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
     {{-- <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script> --}}
@@ -76,6 +79,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.all.js"></script>
 
     <script src="{{ asset('assets/js/main.js') }}?v=20230210"></script>
+    <script src="{{ asset('assets/js/main2.js') }}?v=20230217"></script>
 
 </body>
 

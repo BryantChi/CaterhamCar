@@ -15,7 +15,7 @@
                                 <a href="/models/{{ $model->id }}">
                                     <img src="{{ $model->models_front_cover != '' ? env('APP_URL') . '/uploads/' . $model->models_front_cover : asset('assets/img/hero/super-seven-600-hp-hero.jpg') }}"
                                         class="img-fluid mb-3" alt="{{ __('') }}">
-                                    <h5>{{ $model->name }}</h5>
+                                    <h5 class="mb-0">{{ $model->name }}</h5>
                                     <span class="px-3 text-light" style="background: url({{ asset('assets/img/icon/caterham4.png') }}) center center no-repeat;">
                                         {{ $model->category != '' || $model->category != null ? $model->category : ''}}
                                     </span>

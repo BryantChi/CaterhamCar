@@ -59,6 +59,7 @@ class PageSettingInfo extends EloquentRepository
         }
         $pageInfo->banner_img = $random_img;
         $pageInfo->banner_img_mob = $random_img_mob;
+        $pageInfo->email = $baseInfos->email;
         $pageInfo->fb = $baseInfos->facebook;
         $pageInfo->ig = $baseInfos->instagram;
         $pageInfo->line = $baseInfos->line;

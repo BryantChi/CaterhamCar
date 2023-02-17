@@ -95,7 +95,7 @@
 
                             <p class="d-flex">
                                 <span class="ion-android-mail icon mr-5"></span>
-                                <span>gary.tsai@o-ma.com.tw</span>
+                                <span>{{ $pageInfo->email }}</span>
                             </p>
                             <p>
                                 <img src="{{ asset('assets/img/contact-card.jpg') }}" class="img-fluid" alt="{{ __('') }}">
@@ -107,6 +107,44 @@
 
             <hr>
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <img src="{{ asset('assets/img/icon/企業品牌.jpg') }}" class="img-fluid" style="width: 18rem;" alt="{{ __('') }}">
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="www.9o-traveller.com.tw" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_02.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="www.airstreamtw.com" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_03.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="sunlight-camp.com.tw" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_04.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="javascript:void(0)" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_05.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="javascript:void(0)" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_06.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3">
+                        <a href="www.caterham.com.tw" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_07.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>

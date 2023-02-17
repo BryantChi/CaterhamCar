@@ -79,8 +79,8 @@ class BaseSettingInfoController extends AdminController
             $form->display('id');
             $form->text('address');
             $form->email('email');
-            $form->mobile('phone')->options(['mask' => '999 999 9999']);;
-            $form->mobile('fax')->options(['mask' => '999 999 9999']);;
+            $form->mobile('phone')->options(['mask' => '99 9999 9999']);;
+            $form->mobile('fax')->options(['mask' => '99 9999 9999']);;
             $form->url('line');
             $form->url('facebook');
             $form->url('instagram');

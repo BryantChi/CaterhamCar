@@ -112,34 +112,34 @@
                     <div class="col-12 text-center mb-4">
                         <img src="{{ asset('assets/img/icon/企業品牌.jpg') }}" class="img-fluid" style="width: 18rem;" alt="{{ __('') }}">
                     </div>
-                    <div class="col-md col-6 mb-3">
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
                         <a href="www.9o-traveller.com.tw" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_01.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
+                        <a href="www.airstreamtw.com" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_02.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
-                    <div class="col-md col-6 mb-3">
-                        <a href="www.airstreamtw.com" target="_blank">
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
+                        <a href="sunlight-camp.com.tw" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_03.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
-                    <div class="col-md col-6 mb-3">
-                        <a href="sunlight-camp.com.tw" target="_blank">
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
+                        <a href="javascript:void(0)" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_04.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
-                    <div class="col-md col-6 mb-3">
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
                         <a href="javascript:void(0)" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_05.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
-                    <div class="col-md col-6 mb-3">
-                        <a href="javascript:void(0)" target="_blank">
-                            <img src="{{ asset('assets/img/icon/企業品牌_06.jpg') }}" class="img-fluid" alt="{{ __('') }}">
-                        </a>
-                    </div>
-                    <div class="col-md col-6 mb-3">
+                    <div class="col-md col-6 mb-3 mx-0 px-0">
                         <a href="www.caterham.com.tw" target="_blank">
-                            <img src="{{ asset('assets/img/icon/企業品牌_07.jpg') }}" class="img-fluid" alt="{{ __('') }}">
+                            <img src="{{ asset('assets/img/icon/企業品牌_06.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
 
                     </div>

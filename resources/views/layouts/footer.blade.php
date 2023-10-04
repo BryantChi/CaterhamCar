@@ -9,6 +9,7 @@
                     {{-- <li><a href="#" class="p-2"><span class="fa-brands fa-twitter"></span></a></li>
                     <li><a href="#" class="p-2"><span class="fa-brands fa-youtube"></span></a></li> --}}
                     <li><a href="{{ $pageInfo->ig }}" class="p-2"><span class="fa-brands fa-instagram"></span></a></li>
+                    <li><a href="{{ $pageInfo->line }}" class="p-2"><span class="fa-brands fa-line"></span></a></li>
                 </ul>
 
             </div>

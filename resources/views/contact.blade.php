@@ -113,6 +113,11 @@
                         <img src="{{ asset('assets/img/icon/企業品牌.jpg') }}" class="img-fluid" style="width: 18rem;" alt="{{ __('') }}">
                     </div>
                     <div class="col-md col-6 mb-3 mx-0 px-1">
+                        <a href="https://www.o-ma.com.tw/" target="_blank">
+                            <img src="{{ asset('assets/img/icon/企業品牌_00.png') }}" class="img-fluid" alt="{{ __('') }}">
+                        </a>
+                    </div>
+                    <div class="col-md col-6 mb-3 mx-0 px-1">
                         <a href="http://www.9o-traveller.com.tw" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_01.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
@@ -137,12 +142,12 @@
                             <img src="{{ asset('assets/img/icon/企業品牌_05.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
-                    <div class="col-md col-6 mb-3 mx-0 px-1">
+                    {{-- <div class="col-md col-6 mb-3 mx-0 px-1">
                         <a href="https://www.caterham.com.tw" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_06.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
 
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

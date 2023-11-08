@@ -33,6 +33,16 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=20230217.2">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-936HYFN4DB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-936HYFN4DB');
+    </script>
+
 </head>
 
 <body>

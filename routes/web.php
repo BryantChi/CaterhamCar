@@ -36,6 +36,10 @@ Route::any('/clear-cache', function () {
 Route::any('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/about', [AboutUsController::class, 'index'])->name('about');
+Route::get('/model-specifications', function() {
+    $pageInfo = PageSettingInfo::getBanners('/model-specifications');
+    return view('model_specifications', ['title' => '車型規格', 'pageInfo' => $pageInfo]);
+})->name('model-specifications');
 
 Route::get('/models', [CarModelsController::class, 'index'])->name('models');
 Route::get('/models/{id}', [CarModelsController::class, 'show']);

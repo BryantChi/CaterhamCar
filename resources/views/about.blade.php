@@ -69,7 +69,9 @@
 
             <div class="row justify-content-center align-content-center">
                 <div class="col-12 mb-4 text-center seven-separator">
-                    <img src="{{ asset('assets/img/about/7-badge.svg') }}" class="img-fluid" alt="{{ __('') }}">
+                    <a href="{{ route('model-specifications') }}">
+                        <img src="{{ asset('assets/img/about/7-badge.svg') }}" class="img-fluid" alt="{{ __('') }}">
+                    </a>
                 </div>
 
                 <div class="col-md-4 mt-5 mt-md-0">

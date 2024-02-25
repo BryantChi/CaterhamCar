@@ -123,7 +123,7 @@
                         </a>
                     </div>
                     <div class="col-md col-6 mb-3 mx-0 px-1">
-                        <a href="http://www.airstreamtw.com" target="_blank">
+                        <a href="https://airstream.com.tw/" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_02.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>
@@ -138,7 +138,7 @@
                         </a>
                     </div>
                     <div class="col-md col-6 mb-3 mx-0 px-1">
-                        <a href="javascript:void(0)" target="_blank">
+                        <a href="https://eriba.com.tw/" target="_blank">
                             <img src="{{ asset('assets/img/icon/企業品牌_05.jpg') }}" class="img-fluid" alt="{{ __('') }}">
                         </a>
                     </div>

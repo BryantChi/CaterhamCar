@@ -198,7 +198,7 @@
                                             <td>9.1:1</td>
                                         </tr>
                                         <tr>
-                                            <td>最大動力</td>
+                                            <td>最大馬力</td>
                                             <td>168 ps @ 7250 rpm</td>
                                             <td>84 bhp @ 6500 rpm</td>
                                         </tr>

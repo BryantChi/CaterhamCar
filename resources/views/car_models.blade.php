@@ -120,12 +120,12 @@
                     room*.</span>
                 <div class="col-md-6">
                     <h5 class="mb-3 text-white">STANDARD</h5>
-                    <img src="{{ asset('assets/img/models/standard-chassis_R.svg') }}" class="img-fluid"
+                    <img src="{{ asset('assets/img/models/standard-chassis_R.jpg') }}" class="img-fluid"
                         alt="{{ __('') }}">
                 </div>
                 <div class="col-md-6">
                     <h5 class="mb-3 text-white">LARGE</h5>
-                    <img src="{{ asset('assets/img/models/standard-chassis_R.svg') }}" class="img-fluid"
+                    <img src="{{ asset('assets/img/models/large-chassis_R.jpg') }}" class="img-fluid"
                         alt="{{ __('') }}">
                 </div>
                 <span class="mt-5 text-light">Standard Chassis will accommodate drivers approximately up to 6’2. Large

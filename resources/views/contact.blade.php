@@ -66,35 +66,84 @@
                     <div class="row justify-content-right">
                         <div class="col-md-8 mx-auto contact-form-contact-info">
                             <p class="d-flex">
-                                <span class="ion-ios-location icon mr-5"></span>
-                                <span>{{ $pageInfo->address }}<br>
+                                <span class="me-1"><i class="fa-solid fa-location-dot"></i></span>
+                                {{-- <span class="ion-ios-location icon mr-5"></span> --}}
+
+                                <span>
+                                    台中旗艦總部地址<br>
+                                    {{ $pageInfo->address }}<br>
                                     <a href="https://goo.gl/maps/biKuasq6JusbMqXo7" target="_blank"
                                         class="text-primary">View on Google map</a></span>
                             </p>
 
                             <p class="d-flex mb-2">
-                                <span class="ion-ios-alarm icon mr-5"></span>
+                                <span class="me-1"><i class="fa-solid fa-clock"></i></span>
+                                {{-- <span class="ion-ios-alarm icon mr-5"></span> --}}
                                 <span>營業時間</span>
                             <div class="ml-5">
                                 <ul class="list-unstyled footer-list">
-                                    <li><a href="javascript:void(0)" class="text-foot"><i class="fa-solid fa-clock"></i>
-                                            <span style="">平日</span>&emsp;AM08:30-PM19:00</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot">&emsp; <span
+                                    <li><a href="javascript:void(0)" class="text-foot">
+                                        {{-- <i class="fa-solid fa-clock"></i> --}}
+                                            <span style="">週一～週五</span>&emsp;AM08:30-PM18:00</a></li>
+                                    <li><a href="javascript:void(0)" class="text-foot"><span
                                                 style="padding-end: 50px;">週六</span>&emsp;AM09:00-PM19:00</a></li>
-                                    <li><a href="javascript:void(0)" class="text-foot">&emsp; <span
+                                    <li><a href="javascript:void(0)" class="text-foot"><span
                                                 style="padding-end: 50px;">週日</span>&emsp;AM10:00-PM18:00</a></li>
                                 </ul>
                             </div>
 
                             </p>
 
-                            <p class="d-flex">
-                                <span class="ion-ios-telephone icon mr-5"></span>
-                                <span>聯絡電話<br><a href="tel:{{ $pageInfo->phone }}">{{ $pageInfo->phone }}</a></span>
+                            <p class="d-flex pb-4">
+                                <span class="me-1"><i class="fa-solid fa-phone"></i></span>
+                                {{-- <span class="ion-ios-telephone icon mr-5"></span> --}}
+                                <span>客服專線<br><a href="tel:{{ $pageInfo->phone }}">{{ $pageInfo->phone }}</a></span>
                             </p>
 
-                            <p class="d-flex">
-                                <span class="ion-android-mail icon mr-5"></span>
+
+
+
+
+                            <p class="d-flex pt-4">
+                                <span class="me-1"><i class="fa-solid fa-location-dot"></i></span>
+                                {{-- <span class="ion-ios-location icon mr-5"></span> --}}
+
+                                <span>
+                                    台北內湖門市地址<br>
+                                    台北市內湖區新湖一路73號<br>
+                                    <a href="https://maps.app.goo.gl/pXspRDxyW7KJ9h25A" target="_blank"
+                                        class="text-primary">View on Google map</a></span>
+                            </p>
+
+                            <p class="d-flex mb-2">
+                                <span class="me-1"><i class="fa-solid fa-clock"></i></span>
+                                {{-- <span class="ion-ios-alarm icon mr-5"></span> --}}
+                                <span>營業時間</span>
+                            <div class="ml-5">
+                                <ul class="list-unstyled footer-list">
+                                    <li><a href="javascript:void(0)" class="text-foot">
+                                        {{-- <i class="fa-solid fa-clock"></i> --}}
+                                            <span style="">週一～週五</span>&emsp;AM08:30-PM19:00</a></li>
+                                    <li><a href="javascript:void(0)" class="text-foot"><span
+                                                style="padding-end: 50px;">週六～週日</span>&emsp;AM10:00-PM17:00</a></li>
+                                </ul>
+                            </div>
+
+                            </p>
+
+                            <p class="d-flex pb-4">
+                                <span class="me-1"><i class="fa-solid fa-phone"></i></span>
+                                {{-- <span class="ion-ios-telephone icon mr-5"></span> --}}
+                                <span>客服專線<br><a href="tel:02-27951212">02-27951212</a></span>
+                            </p>
+
+
+
+
+
+                            <p class="d-flex pt-4">
+                                <span class="me-1"><i class="fa-solid fa-envelope"></i></span>
+                                {{-- <span class="ion-android-mail icon mr-5"></span> --}}
                                 <span>{{ $pageInfo->email }}</span>
                             </p>
                             <p>

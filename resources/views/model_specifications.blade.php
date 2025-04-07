@@ -28,7 +28,7 @@
                                                 (道路懸吊)</td>
                                             <td>SEVEN 340窄版S3<br>
                                                 (運動懸吊)</td>
-                                            <td>SEVEN 340寬版S5</td>
+                                            <td>SEVEN 340寬版SV</td>
                                             <td>SEVEN 170</td>
                                         </tr>
                                         <tr>

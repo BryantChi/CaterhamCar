@@ -18,25 +18,31 @@ class IndexController extends Controller
     {
         //
         $homePageInfo = HomePageInfo::first();
-        $slide = $homePageInfo->slide_setting ?? [];
-        $slide_mob = $homePageInfo->slide_setting_mob ?? [];
+        $slide = array();
+        $slide = json_decode($homePageInfo->slide_setting);
+        $slide_mob = array();
+        $slide_mob = json_decode($homePageInfo->slide_setting_mob);
 
         // 依照 sort 欄位排序
-        if (is_array($slide)) {
+        if (is_array($slide) && !empty($slide)) {
             usort($slide, function($a, $b) {
-                return ($a['sort'] ?? 999) <=> ($b['sort'] ?? 999);
+                $sortA = isset($a->sort) ? (int)$a->sort : 999;
+                $sortB = isset($b->sort) ? (int)$b->sort : 999;
+                return $sortA <=> $sortB;
             });
         }
 
-        if (is_array($slide_mob)) {
+        // 手機版輪播：如果為空或沒資料，使用桌面版
+        if (empty($slide_mob) || !is_array($slide_mob) || count($slide_mob) === 0) {
+            $slide_mob = $slide;
+        } else {
+            // 有資料則排序
             usort($slide_mob, function($a, $b) {
-                return ($a['sort'] ?? 999) <=> ($b['sort'] ?? 999);
+                $sortA = isset($a->sort) ? (int)$a->sort : 999;
+                $sortB = isset($b->sort) ? (int)$b->sort : 999;
+                return $sortA <=> $sortB;
             });
         }
-
-        // 轉換成物件格式供 blade 使用
-        $slide = json_decode(json_encode($slide));
-        $slide_mob = json_decode(json_encode($slide_mob));
 
         return view('index', ['pageInfo' => $this->getBanner(), 'slide' => $slide, 'slide_mob' => $slide_mob]);
         // return view('index');

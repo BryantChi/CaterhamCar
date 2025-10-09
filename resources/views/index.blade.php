@@ -90,7 +90,7 @@
                                             class="btn-play"><span class="ion ion-ios-play"></span></a></p>
                                 </div> --}}
                                 <h1 class="mb-4 mx-3"><span>{{ $item->title }}</span></h1>
-                                <p class="mb-4 w-75">{{ $item->sub_title }}</p>
+                                <p class="mb-4 mx-auto px-3" style="max-width: 100%; word-wrap: break-word; white-space: normal; line-height: 1.6;">{{ $item->sub_title }}</p>
                                 <div
                                     class="btn-play-wrap mx-auto {{ $item->video_url != null && $item->video_url != '' ? '' : 'd-none' }}">
                                     <p class="mb-3"><a href="{{ $item->video_url }}" data-fancybox data-ratio="2"

@@ -80,22 +80,50 @@ class HomePageInfoController extends AdminController
             $form->display('id');
             // $form->text('slide_setting');
             $form->array('slide_setting', function ($table) {
+                $table->number('sort', __('順序'))->default(1)->attribute(['min' => 1, 'max' => 99])->required();
                 $table->text('title', __('標題'));
                 $table->text('sub_title', __('副標題'));
                 $table->image('slide_img', __('圖片'))->move('images/slide/'.date('Ym'))->maxSize(1024);//->rules('mimes:jpg,jpeg,png,gif')
                 $table->url('video_url', __('YouTube影片網址'));
             })->saving(function ($v) {
-                // 转化为json格式存储
+                // 檢查 sort 是否有重複
+                if (is_array($v)) {
+                    $sortValues = array_column($v, 'sort');
+                    if (count($sortValues) !== count(array_unique($sortValues))) {
+                        return response()->json([
+                            'status' => false,
+                            'message' => '順序不可重複，請確保每個輪播的順序號碼都不同！'
+                        ]);
+                    }
+                    // 依照 sort 欄位排序後再存儲
+                    usort($v, function($a, $b) {
+                        return ($a['sort'] ?? 999) <=> ($b['sort'] ?? 999);
+                    });
+                }
                 return json_encode($v);
             });
 
             $form->array('slide_setting_mob', function ($table) {
+                $table->number('sort', __('順序'))->default(1)->attribute(['min' => 1, 'max' => 99])->required();
                 $table->text('title', __('標題'));
                 $table->text('sub_title', __('副標題'));
                 $table->image('slide_img', __('圖片'))->move('images/slide/'.date('Ym'))->maxSize(1024);//->rules('mimes:jpg,jpeg,png,gif')
                 $table->url('video_url', __('YouTube影片網址'));
             })->saving(function ($v) {
-                // 转化为json格式存储
+                // 檢查 sort 是否有重複
+                if (is_array($v)) {
+                    $sortValues = array_column($v, 'sort');
+                    if (count($sortValues) !== count(array_unique($sortValues))) {
+                        return response()->json([
+                            'status' => false,
+                            'message' => '順序不可重複，請確保每個輪播的順序號碼都不同！'
+                        ]);
+                    }
+                    // 依照 sort 欄位排序後再存儲
+                    usort($v, function($a, $b) {
+                        return ($a['sort'] ?? 999) <=> ($b['sort'] ?? 999);
+                    });
+                }
                 return json_encode($v);
             });
 

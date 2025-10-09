@@ -18,8 +18,8 @@ class IndexController extends Controller
     {
         //
         $homePageInfo = HomePageInfo::first();
-        $slide = json_decode($homePageInfo->slide_setting, true) ?? [];
-        $slide_mob = json_decode($homePageInfo->slide_setting_mob, true) ?? [];
+        $slide = $homePageInfo->slide_setting ?? [];
+        $slide_mob = $homePageInfo->slide_setting_mob ?? [];
 
         // 依照 sort 欄位排序
         if (is_array($slide)) {
@@ -34,7 +34,7 @@ class IndexController extends Controller
             });
         }
 
-        // 轉換回物件格式供 blade 使用
+        // 轉換成物件格式供 blade 使用
         $slide = json_decode(json_encode($slide));
         $slide_mob = json_decode(json_encode($slide_mob));
 
